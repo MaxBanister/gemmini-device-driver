@@ -32,7 +32,7 @@ lsmod | grep gemmini
 
 ### Building a Statically Linked Module with Linux
 
-The normal way of using the module will be building it in to a custom kernel. To do so, first follow the instructions at https://github.com/tactcomplabs/xbgas-tools/blob/master/README.md to clone Linux, create a BusyBox archive, and build Spike and Berkeley Bootloader (bbl) if you haven't already, then follow these steps:
+The normal way of using the module will be building it in to a custom kernel. To do so, first follow the instructions at https://github.com/tactcomplabs/xbgas-tools/blob/master/README.md to clone Linux, create a BusyBox archive, and build Spike if you haven't already, then follow these steps:
 
 1. In a scratch directory, clone the device driver.
 
