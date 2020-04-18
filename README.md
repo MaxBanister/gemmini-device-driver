@@ -71,7 +71,7 @@ make -j16 ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu-
 6. To test in Spike, simply run:
 
 ```
-spike -p2 vmlinux
+spike -p2 bbl
 ```
 
 The `-p2` option feeds a two-hart device tree into Spike, which runs the modified version of bbl on both harts, which subsequently runs Linux on hart 0 and GemminiOS on hart 1. The modified version of bbl hardcodes the assumption that Gemmini firmware will run on hart 1, since this was designed for use with the Beagle chip. Changing this in GemminiOS should be facile, but is not recommended.
