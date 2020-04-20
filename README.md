@@ -74,6 +74,6 @@ make -j16 ARCH=riscv CROSS_COMPILE=riscv64-unknown-linux-gnu-
 spike -p2 bbl
 ```
 
-The `-p2` option feeds a two-hart device tree into Spike, which runs the modified version of bbl on both harts, which subsequently runs Linux on hart 0 and GemminiOS on hart 1. The modified version of bbl hardcodes the assumption that Gemmini firmware will run on hart 1, since this was designed for use with the Beagle chip. Changing this in GemminiOS should be facile, but is not recommended.
+The `-p2` option feeds a two-hart device tree into Spike, which runs the modified version of bbl on both harts, which subsequently runs Linux on hart 0 and GemminiOS on hart 1. The modified version of bbl hardcodes the assumption that Gemmini firmware will run on hart 1, since this was designed for use with the a chip which had a systolic array on hart 1. Changing this in GemminiOS should be facile, but is not recommended.
 
 This should drop you into the ash shell, from which you can run a test program that utilizes the device driver to send commands to the Gemmini hart.
